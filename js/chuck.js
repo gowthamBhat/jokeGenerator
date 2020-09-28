@@ -7,6 +7,7 @@ $(document).ready(function () {
             data: "",
             dataType: "json",
             success: function (response, status, xhr) {
+                $('#randomJoke').html("");
                 $('#chulJoke').html(response.value);
                 console.log(response.value);
 
@@ -21,40 +22,22 @@ $(document).ready(function () {
 
     $('#rand').on('click', function () {
 
-        $.ajax({
-            type: "get",
-            url: "https://sv443.net/jokeapi/v2/joke/Programming",
-            data: "",
-            // headers: {
-            //     "x-rapidapi-host": "jokeapi.p.rapidapi.com",
-            //     "x-rapidapi-key": "934d08ff2bmsh39e9e4cef71c30ap1b6cd2jsn82f589d82410"
-            // }
-
-            dataType: "json",
-            success: function (response, status, xhr) {
-                $('#randomJoke').html(response.joke || response.setup + ""
-                    + response.delivery);
-                console.log(response);
-
-            },
-            error: function (jqXhr, textStatus, errorMessage) {
-                console.log(errorMessage);
-
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://joke3.p.rapidapi.com/v1/joke",
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "joke3.p.rapidapi.com",
+                "x-rapidapi-key": "41df6f7aa8msha78ad83a330b684p1a9289jsn432106fd5e89"
             }
-        });
-        // fetch("https://jokeapi.p.rapidapi.com/categories?format=json", {
-        //     "method": "GET",
-        //     "headers": {
-        //         "x-rapidapi-host": "jokeapi.p.rapidapi.com",
-        //         "x-rapidapi-key": "934d08ff2bmsh39e9e4cef71c30ap1b6cd2jsn82f589d82410"
-        //     }
-        // })
-        //     .then(response => { return response.json() })
-        //     .then(response => console.log(response))
-        //     .catch(err => {
-        //         console.log("the message", err);
-        //     });
+        }
 
+        $.ajax(settings).done(function (response) {
+            $('#chulJoke').html("");
+            $('#randomJoke').html(response.content);
+            console.log(response);
+        });
 
     });
 
