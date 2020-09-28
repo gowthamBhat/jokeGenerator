@@ -29,7 +29,7 @@ $(document).ready(function () {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "joke3.p.rapidapi.com",
-                "x-rapidapi-key": "41df6f7aa8msha78ad83a330b684p1a9289jsn432106fd5e89"
+                "x-rapidapi-key": "" //use your API key
             }
         }
 
