@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
     $('#chuck').on('click', function () {
 
@@ -29,7 +31,7 @@ $(document).ready(function () {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "joke3.p.rapidapi.com",
-                "x-rapidapi-key": "" //use your API key
+                "x-rapidapi-key": apiKey //use your API key
             }
         }
 

@@ -4,25 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/chuck.css">
     <script src="./js/jquery-3.5.1.min.js"></script>
     <title>Chuck Jokes</title>
 
 </head>
 
 <body>
-    <div id="wrapper">
-        <center>
+    <div id="wrapper" class="wrapper">
+        <div id="JokeWrapper">
+
             <p id="chulJoke"></p>
-        </center>
-        <center>
+
+
             <p id="randomJoke"></p>
-        </center>
+
+        </div>
+        <div id="ButtonWrapper"><button id="chuck" class="btn btn-dark">chuck</button> &nbsp &nbsp &nbsp &nbsp<button
+                id="rand" class="btn btn-dark">random</button></div>
+
     </div>
 
-    <center> <button id="chuck">chuck</button><button id="rand">random</button></center>
-
-
+    <script src="ApiKey.js"></script>
     <script src="./js/chuck.js"></script>
+
 </body>
 
 </html>
