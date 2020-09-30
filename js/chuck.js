@@ -1,6 +1,9 @@
 
 
 $(document).ready(function () {
+
+    var Joke = $('#Joke');
+
     $('#chuck').on('click', function () {
 
         $.ajax({
@@ -9,9 +12,9 @@ $(document).ready(function () {
             data: "",
             dataType: "json",
             success: function (response, status, xhr) {
-                $('#randomJoke').html("");
-                $('#chulJoke').html(response.value);
-                console.log(response.value);
+
+                Joke.html(response.value);
+                console.log(response);
 
             },
             error: function (jqXhr, textStatus, errorMessage) {
@@ -36,8 +39,8 @@ $(document).ready(function () {
         }
 
         $.ajax(settings).done(function (response) {
-            $('#chulJoke').html("");
-            $('#randomJoke').html(response.content);
+
+            Joke.html(response.content);
             console.log(response);
         });
 
