@@ -1,5 +1,18 @@
+body {
+  background-image: url("../img/alice-1601565091246-9211.jpg");
+}
+
 #wrapper {
   position: relative;
   top: 300px;
   left: 650px;
+  width: fit-content;
+  height: fit-content;
+}
+/* #ButtonWrapper {
+  width: fit-content;
+  height: fit-content;
+} */
+#Joke {
+  color: white;
 }
