@@ -1,5 +1,6 @@
 body {
   background-image: url("../img/alice-1601565091246-9211.jpg");
+  background-repeat: no-repeat;
 }
 
 #wrapper {
